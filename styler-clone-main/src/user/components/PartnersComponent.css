@@ -1,0 +1,152 @@
+.partners-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;
+  border-radius: 15px;
+  padding: 40px 20px;
+  width: 100%;
+  max-width: 95%;
+  height: 520px;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+.partners-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.partners-text {
+  color: #ffffff;
+  font-size: 22px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.partners-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.partners-track {
+  display: flex;
+  gap: 10px;
+  width: 200%;
+}
+
+.partners-row {
+  display: flex;
+  gap: 10px;
+  flex: 1 0 auto;
+}
+
+.partner-card {
+  width: 190px;
+  height: 190px;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  padding: 15px;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.partner-logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+  vertical-align: middle;
+  animation: rotate 4s linear infinite;
+}
+
+.partner-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.partner-text {
+  font-size: 54px;
+  font-weight: bold;
+  color: #000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .partners-container {
+    height: 400px;
+    padding: 30px 15px;
+  }
+
+  .partners-text {
+    font-size: 18px;
+  }
+
+  .partner-card {
+    width: 150px;
+    height: 150px;
+  }
+
+  .partner-name {
+    font-size: 16px;
+  }
+
+  .partner-text {
+    font-size: 40px;
+  }
+
+  .partners-track {
+    gap: 8px;
+  }
+
+  .partners-row {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .partners-container {
+    height: 350px;
+    padding: 25px 10px;
+  }
+
+  .partners-text {
+    font-size: 16px;
+  }
+
+  .partner-card {
+    width: 130px;
+    height: 130px;
+    padding: 12px;
+  }
+
+  .partner-logo {
+    width: 25px;
+    height: 25px;
+  }
+
+  .partner-name {
+    font-size: 14px;
+  }
+
+  .partner-text {
+    font-size: 32px;
+  }
+
+  .partners-track {
+    gap: 6px;
+  }
+
+  .partners-row {
+    gap: 6px;
+  }
+}

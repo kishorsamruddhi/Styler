@@ -1,0 +1,61 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@400;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  --fly-duration:500ms;
+  --offset:200;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+ .abs-center{
+    position: absolute;
+    left:50%;
+    top:50%;
+  }
+  .transform-center{
+    transform:translate(-50%,-50%)
+  }
+
+.fly-animation-container .fly-animation {
+   transition: all .5s ease-in-out;
+}
+
+.fly-animation-container:hover .fly-animation {
+  animation: flyUp 500ms linear 1;
+}
+
+@keyframes flyUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-200%);
+  }
+  30.0001% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  70% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}

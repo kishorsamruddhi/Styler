@@ -1,0 +1,105 @@
+/* This container is FIXED to the bottom of the viewport, creating the "window" */
+.circular-container {
+  position: absolute;
+  bottom: 0;
+  left: 25%;
+  width: 50%;
+  height: 8vh; /* The height of the visible area */
+  /* overflow: hidden; Hides the rest of the giant circle */
+  pointer-events: none;
+  position: relative;
+  z-index: 1001;
+}
+
+/* The slider is a giant, invisible circle that we rotate. */
+.slider {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Center the slider horizontally */
+
+  /* Make the slider extremely large to create a very gentle curve */
+  width: 80vw;
+  height: 80vw;
+  max-width: 3000px;
+  max-height: 3000px;
+
+  /* This fixes any wobble during rotation */
+  transform-origin: center;
+}
+
+/* Styling for the individual image cards */
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 130px;
+  height: 130px;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  pointer-events: auto; /* Re-enables clicks for the images */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Add this new class to your CSS file */
+
+.fullscreen-overlay {
+  position: fixed; /* Position it relative to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw; /* Cover the full viewport width */
+  height: 100vh; /* Cover the full viewport height */
+  background-color: rgba(0, 0, 0, 0.85); /* Semi-transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of other content */
+  padding: 2rem;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.fullscreen-overlay img {
+  max-width: 65%; /* Limit image width to prevent overflow */
+  max-height: 75%; /* Limit image height */
+  object-fit: contain; /* Maintain aspect ratio without cropping */
+  border-radius: 10px; /* Optional: adds a nice touch */
+}
+
+.hover-background-viewer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Use 100vh to ensure it covers viewport height */
+
+  /* THIS IS THE KEY CHANGE */
+  /* Send the container to the very back */
+
+  z-index: 1000;
+
+  pointer-events: none;
+  transition: opacity 1s ease-in-out; /* Slowed down for a smoother effect */
+}
+
+.hover-background-viewer img {
+  width: 93%;
+  height: 90%;
+  margin-left: 4%;
+  margin-top: 5%;
+  margin-right: 5%;
+  border-radius: 30px;
+  transition: opacity 1s ease-in-out;
+
+  /* This makes the image cover the area without stretching */
+  object-fit: cover;
+
+  /* You can adjust this to focus on a different part of the image */
+  object-position: center;
+}
